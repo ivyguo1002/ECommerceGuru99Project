@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Magento.Tests
 {
-    public class Test1
+    public class Tests
     {
         public IWebDriver Driver { get; set; }
 
@@ -34,6 +34,22 @@ namespace Magento.Tests
             var mobilePage = homePage.NavigateToMobilePage();
             mobilePage.SortBy(mobilePage.TopSortBYMenu,SortMenu.Name);
             Assert.That(mobilePage.ProductNames, Is.Ordered);
+        }
+
+        [Test]
+        [TestCase("Sony Xperia", "$100.00")]
+        public void ProductCostInListPageAndDetailsPageShouldBeEqual(string model, string price)
+        {
+            Driver.Navigate().GoToUrl(MagentoConfig.HomePage);
+            var homePage = new HomePage(Driver);
+            var mobilePage = homePage.NavigateToMobilePage();
+
+            string priceInListPage = mobilePage.GetPhoneModelPrice(model);
+            Assert.That(priceInListPage, Is.EqualTo(price));
+
+            var detailsPage = mobilePage.NavigateToDetailsPage(model);
+            string priceInDetailsPage = detailsPage.GetPhoneModelPrice();
+            Assert.That(priceInDetailsPage, Is.EqualTo(priceInListPage));
         }
 
         [TearDown]

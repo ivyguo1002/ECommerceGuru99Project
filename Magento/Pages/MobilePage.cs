@@ -17,6 +17,7 @@ namespace Magento.Pages
         internal SelectElement TopSortBYMenu => new SelectElement(Driver.WaitForElements(By.CssSelector("select[title='Sort By']"))[0]);
         internal SelectElement BottomSortBYMenu => new SelectElement(Driver.WaitForElements(By.CssSelector("select[title='Sort By']"))[1]);
         private IList<IWebElement> MobileProductNames => Driver.WaitForElements(By.CssSelector(".product-name"));
+
         public MobilePage(IWebDriver driver)
         {
             Driver = driver;
@@ -39,6 +40,17 @@ namespace Magento.Pages
                 }
                 return nameList;
             }
+        }
+
+        internal string GetPhoneModelPrice(string model)
+        {
+             return Driver.WaitForElement(By.XPath("//h2[@class='product-name'][contains(., '" + model + "')]//following-sibling::div[@class='price-box']")).Text;
+        }
+
+        internal DetailsPage NavigateToDetailsPage(string model)
+        {
+            Driver.WaitForElement(By.CssSelector("a[title='" + model + "']")).Click();
+            return new DetailsPage(Driver);
         }
     }
 }
