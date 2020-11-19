@@ -2,6 +2,8 @@
 using Magento.Utils;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using System;
 
 namespace Magento.Pages
@@ -24,5 +26,6 @@ namespace Magento.Pages
             MobileMenu.Click();
             return new MobilePage(Driver);
         }
+
     }
 }

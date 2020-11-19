@@ -52,5 +52,11 @@ namespace Magento.Pages
             Driver.WaitForElement(By.CssSelector("a[title='" + model + "']")).Click();
             return new DetailsPage(Driver);
         }
+
+        internal ShoppingCartPage AddToCart(string model)
+        {
+            Driver.WaitForElement(By.XPath("//h2[@class='product-name'][contains(., '" + model + "')]//following-sibling::div/button[contains(@class, 'btn-cart')]")).Click();
+            return new ShoppingCartPage(Driver);
+        }
     }
 }
