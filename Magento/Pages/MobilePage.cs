@@ -17,6 +17,7 @@ namespace Magento.Pages
         internal SelectElement TopSortBYMenu => new SelectElement(Driver.WaitForElements(By.CssSelector("select[title='Sort By']"))[0]);
         internal SelectElement BottomSortBYMenu => new SelectElement(Driver.WaitForElements(By.CssSelector("select[title='Sort By']"))[1]);
         private IList<IWebElement> MobileProductNames => Driver.WaitForElements(By.CssSelector(".product-name"));
+        private IWebElement CompareBtn => Driver.WaitForElement(By.CssSelector("button[title='Compare']"));
 
         public MobilePage(IWebDriver driver)
         {
@@ -57,6 +58,17 @@ namespace Magento.Pages
         {
             Driver.WaitForElement(By.XPath("//h2[@class='product-name'][contains(., '" + model + "')]//following-sibling::div/button[contains(@class, 'btn-cart')]")).Click();
             return new ShoppingCartPage(Driver);
+        }
+
+        internal MobilePage AddToCompare(string model)
+        {
+            Driver.WaitForElement(By.XPath("//h2[@class='product-name'][contains(., '" + model + "')]//following-sibling::div/ul//li/a[@class='link-compare']")).Click();
+            return this;
+        }
+
+        internal void Compare()
+        {
+            CompareBtn.Click();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Magento.Utils;
 using OpenQA.Selenium;
 using System;
+using System.Collections.Generic;
 
 namespace Magento.Pages
 {

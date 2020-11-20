@@ -14,7 +14,6 @@ namespace Magento.Pages
         public const string Title = "Home page";
         public string PageTitle => Driver.WaitForElement(By.CssSelector(".page-title>h2")).Text;
         private IWebElement MobileMenu => Driver.WaitForElement(By.XPath("//a[contains(., 'Mobile')]"));
-
         public HomePage(IWebDriver driver)
         {
             Driver = driver;
