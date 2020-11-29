@@ -117,10 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BackendLoginPage" xml:space="preserve">
+    <value>/backendlogin</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>chrome</value>
+    <comment>firefox, chrome</comment>
+  </data>
   <data name="HomePage" xml:space="preserve">
     <value>http://live.demoguru99.com/index.php</value>
   </data>
   <data name="MobilePage" xml:space="preserve">
     <value>/mobile.html</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>guru99com</value>
+  </data>
+  <data name="username" xml:space="preserve">
+    <value>user01</value>
   </data>
 </root>

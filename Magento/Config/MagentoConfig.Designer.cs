@@ -61,6 +61,24 @@ namespace Magento.Config {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /backendlogin.
+        /// </summary>
+        internal static string BackendLoginPage {
+            get {
+                return ResourceManager.GetString("BackendLoginPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chrome.
+        /// </summary>
+        internal static string Browser {
+            get {
+                return ResourceManager.GetString("Browser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://live.demoguru99.com/index.php.
         /// </summary>
         internal static string HomePage {
@@ -75,6 +93,24 @@ namespace Magento.Config {
         internal static string MobilePage {
             get {
                 return ResourceManager.GetString("MobilePage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to guru99com.
+        /// </summary>
+        internal static string password {
+            get {
+                return ResourceManager.GetString("password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to user01.
+        /// </summary>
+        internal static string username {
+            get {
+                return ResourceManager.GetString("username", resourceCulture);
             }
         }
     }

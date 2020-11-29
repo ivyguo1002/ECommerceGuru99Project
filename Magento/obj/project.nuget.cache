@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "R4vrR9IUaRduT8B5CptNXQxkYEDG5Z6onua7kcAEUfrxTzOAsPA2uNCnDaJM1pxHBQdq/JUBj6xaXe/lgBa/SQ==",
+  "dgSpecHash": "S3WYmcKfJDigY3lBcxFertODmS2E890JqutbAn9y273QcgivT7WezHmLSjgdGuP95GmXSE2B67OdZmoZGeZOSA==",
   "success": true,
   "projectFilePath": "C:\\Ivy\\repos\\ECommerce\\Magento\\Magento.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,7 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\selenium.firefox.webdriver\\0.27.0\\selenium.firefox.webdriver.0.27.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\selenium.support\\3.141.0\\selenium.support.3.141.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\selenium.webdriver.chromedriver\\85.0.4183.8700\\selenium.webdriver.chromedriver.85.0.4183.8700.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",

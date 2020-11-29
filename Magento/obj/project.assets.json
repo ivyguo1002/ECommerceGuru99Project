@@ -497,6 +497,12 @@
           "lib/netstandard2.0/WebDriver.dll": {}
         }
       },
+      "Selenium.WebDriver.ChromeDriver/85.0.4183.8700": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.ChromeDriver.targets": {}
+        }
+      },
       "System.AppContext/4.1.0": {
         "type": "package",
         "dependencies": {
@@ -1995,6 +2001,23 @@
         "lib/netstandard2.0/WebDriver.xml",
         "selenium.webdriver.3.141.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.ChromeDriver/85.0.4183.8700": {
+      "sha512": "UaHj0RDkUoNtvYTVfZJk9Im/YpQX2nxugUZ5qWwx9phVu33tiecpBeTqQk4IPz8GQqUUjKdlT4QxKgu8VPafnA==",
+      "type": "package",
+      "path": "selenium.webdriver.chromedriver/85.0.4183.8700",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/DefinePropertiesChromeDriver.targets",
+        "build/Selenium.WebDriver.ChromeDriver.targets",
+        "driver/linux64/chromedriver",
+        "driver/mac64/chromedriver",
+        "driver/win32/chromedriver.exe",
+        "nupkg-icon.png",
+        "selenium.webdriver.chromedriver.85.0.4183.8700.nupkg.sha512",
+        "selenium.webdriver.chromedriver.nuspec"
       ]
     },
     "System.AppContext/4.1.0": {
@@ -4633,6 +4656,7 @@
       "NUnit3TestAdapter >= 3.15.1",
       "Selenium.Firefox.WebDriver >= 0.27.0",
       "Selenium.Support >= 3.141.0",
+      "Selenium.WebDriver.ChromeDriver >= 85.0.4183.8700",
       "nunit >= 3.12.0"
     ]
   },
@@ -4692,6 +4716,10 @@
           "Selenium.Support": {
             "target": "Package",
             "version": "[3.141.0, )"
+          },
+          "Selenium.WebDriver.ChromeDriver": {
+            "target": "Package",
+            "version": "[85.0.4183.8700, )"
           },
           "nunit": {
             "target": "Package",
